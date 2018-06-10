@@ -41,7 +41,7 @@ class App extends React.Component {
                     <AppContext.Consumer>
                         {(context) => (
                             <div>
-                                <p>{context.state.count}</p>
+                                <p>Current Count: {context.state.count}</p>
                                 <Button text='Increase' onClick={context.inreaseCount}/>
                                 <Button text='Decrease' onClick={context.decreaseCount}/>
                             </div>
