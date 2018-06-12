@@ -50,37 +50,37 @@ class All extends React.Component {
 
 const AppContext = React.createContext();
 
-class AppProvider extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            count: 0
-        }
+// class AppProvider extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             count: 0
+//         }
 
-        this.increaseCount = this.increaseCount.bind(this);
-        this.decreaseCount = this.decreaseCount.bind(this);
-    }
+//         this.increaseCount = this.increaseCount.bind(this);
+//         this.decreaseCount = this.decreaseCount.bind(this);
+//     }
 
-    increaseCount() {
-    	this.setState({count: this.state.count += 1})
-    }
+//     increaseCount() {
+//     	this.setState({count: this.state.count += 1})
+//     }
 
-    decreaseCount() {
-    	this.setState({count: this.state.count -= 1})
-    }
+//     decreaseCount() {
+//     	this.setState({count: this.state.count -= 1})
+//     }
 
-    render() {
-        return (
-            <AppContext.Provider value={{
-                state: this.state,
-                inreaseCount: this.increaseCount,
-                decreaseCount: this.decreaseCount,
-            }}>
-                {this.props.children}
-            </AppContext.Provider>
-        )
-    }
-}
+//     render() {
+//         return (
+//             <AppContext.Provider value={{
+//                 state: this.state,
+//                 inreaseCount: this.increaseCount,
+//                 decreaseCount: this.decreaseCount,
+//             }}>
+//                 {this.props.children}
+//             </AppContext.Provider>
+//         )
+//     }
+// }
 
 class App extends React.Component {
     constructor(props) {
