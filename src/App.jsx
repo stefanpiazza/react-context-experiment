@@ -37,28 +37,28 @@ class App extends React.Component {
         	<AppContext.Provider value={{
         	    state: this.state,
         	    inreaseCount: this.increaseCount,
-        	    decreaseCount: this.decreaseCount,
+        	    decreaseCount: this.decreaseCount
         	}}>
-            <div className='app'>
-               	<AppContext.Consumer>
-            	    {(context) => (
-            	        <div>
-            	            <p>Current Count: {context.state.count}</p>
-            	        </div>
-            	    )}
-            	</AppContext.Consumer>
-            	<Router>
-            		<React.Fragment>
-    	            	<Link to='/'>Home</Link>
-                		<Link to='/all'>All</Link>
-                		<Switch>
-                		    <Route exact path='/' component={Home}/>
-                		    <Route exact path='/all' component={All}/>
-                		</Switch>
-            		</React.Fragment>
-                </Router>
-            </div>
-        </AppContext.Provider>
+	            <div className='app'>
+	               	<AppContext.Consumer>
+	            	    {(context) => (
+	            	        <div>
+	            	            <p>Current Count: {context.state.count}</p>
+	            	        </div>
+	            	    )}
+	            	</AppContext.Consumer>
+	            	<Router>
+	            		<React.Fragment>
+	    	            	<Link to='/'>Home</Link>
+	                		<Link to='/all'>All</Link>
+	                		<Switch>
+	                		    <Route exact path='/' component={Home}/>
+	                		    <Route exact path='/all' component={All}/>
+	                		</Switch>
+	            		</React.Fragment>
+	                </Router>
+	            </div>
+	        </AppContext.Provider>
         )
     }
 }
