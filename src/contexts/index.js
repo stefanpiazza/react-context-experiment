@@ -1,6 +1,6 @@
-import React from 'react';
+'use strict';
 
-const AppContext = React.createContext();
+import AppContext from './app';
 
 export {
 	AppContext
